@@ -13,6 +13,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "nanoid": "^5.0.3",
     "next": "14.0.2",
+    "nextjs-basic-auth-middleware": "^3.1.0",
     "openai": "^4.17.3",
     "ramda": "^0.29.1",
     "react": "^18",

@@ -4,7 +4,6 @@ We're all used to streamed text content from LLM chat APIs. With the release of 
 
 <!-- Demo (maybe video for now) -->
 
-
 A lot of chat APIs use [server-sent events]([https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events). This works well for text based data and there are nice primitives to use in the browser to handle these event streams.
 
 However we wanted to stream text and binary audio data at the same time. One option could have been to use base64 encoding, but this felt hacky and inefficient. It involves extra processing on both the server and the client.
@@ -19,7 +18,6 @@ It is actually simple. You define a boundary string and then separate each part 
 
 ![Response Headers](/images/response-headers.png?raw=true)
 ![Example Response](/images/example-response.png?raw=true)
-
 
 <!-- screenshot of what it looks like -->
 
@@ -160,6 +158,8 @@ recorder.ondataavailable = (event) => {
 
 ## Conclusion
 
-This was a fun experiment that we think could be useful for many projects. It seems highly likely that as a tech community we are going to be building a lot of software on top of LLM APIs. It also seems highly likely that more LLMs will becomre multi-modal AND that no matter the speed improvements there will be many usecases where you want to stream the data to your application rather than wait for the full response.
+This was a fun experiment that we think could be useful for many projects. It seems highly likely that as a tech community we are going to be building a lot of software on top of LLM APIs. It also seems highly likely that more LLMs will become multi-modal AND that no matter the speed improvements there will be many usecases where you want to stream the data to your application rather than wait for the full response.
 
 Maybe its time for the return of `multipart/x-mixed-replace`!
+
+ps we're regularly launching AI based features into smart data analysis platform - [AddMaple](https://addmaple.com)
