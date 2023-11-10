@@ -20,7 +20,6 @@ export const handlePartFactory = ({
       enqueueAudio(audioBlob)
     } else if (contentType === "application/json") {
       const results = await Promise.all(content.map(handleFunction))
-
       addMessage([
         {role: "assistant", id, content: null, tool_calls: content},
         ...results.map((result, idx) => ({

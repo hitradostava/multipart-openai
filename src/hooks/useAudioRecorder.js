@@ -24,7 +24,6 @@ const useAudioRecorder = ({
       const options = {mimeType: "audio/webm"}
       recorder = new MediaRecorder(stream, options)
       recorder.ondataavailable = async (event) => {
-        console.log("new data", event)
         const blob = event.data
         handleNewAudio(blob)
       }
@@ -55,7 +54,6 @@ const useAudioRecorder = ({
     }
 
     return () => {
-      console.log("cleaning up...")
       // this should run on dismount, but also each time recording changes, but prior to the effect
       if (recorder?.state === "recording") {
         recorder?.stop()
