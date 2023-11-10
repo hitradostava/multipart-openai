@@ -27,7 +27,7 @@ We wanted to start playing audio as soon as text was being streamed back from th
 
 Each returned audio stream is then pushed to the client. The end result is a mixed stream that contains both text and audio data. Audio is sent a sentence at a time, while text is streamed a word at a time with new partitions every 5 words. The result is a stream that could look like this:
 
-```HTTP
+```http
 ----MultipartStreamBoundary
 Content-Type: text/plain
 
